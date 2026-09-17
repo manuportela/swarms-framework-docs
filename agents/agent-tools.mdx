@@ -177,7 +177,6 @@ agent = Agent(
     tools=[web_search],
 )
 ```
-
 ### Database Query Tool
 
 ```python
@@ -357,7 +356,6 @@ class DatabaseTool:
     def connect(self) -> str:
         """
         Connect to the database.
-        
         Returns:
             Connection status message
         """
@@ -531,13 +529,14 @@ def analyze_data(data: str) -> dict:
 ### 3. Handle Errors Gracefully
 
 ```python
+import requests
+
 def api_call(endpoint: str) -> str:
     """
     Make an API call.
     
     Args:
         endpoint: API endpoint to call
-    
     Returns:
         API response or error message
     """
